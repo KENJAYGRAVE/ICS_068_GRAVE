@@ -73,3 +73,9 @@ class TimestampedTodoList extends todoList {
 }
 document.addEventListener('DOMContentLoaded', () => new todoList());
 
+let person = prompt("Please enter your name", "Harry Potter");
+
+if (person != null) {
+  document.getElementById("demo").innerHTML =
+  "Hello " + person + "! How are you today?";
+}
