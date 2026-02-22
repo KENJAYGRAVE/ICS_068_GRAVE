@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment Borrowing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Equipment Borrowing System</h1>
+
+<!-- DASHBOARD 1: Borrower & Equipment Status -->
+<div class="card" id="dashboard-main">
+    <h2>Dashboard: Borrow & Equipment Status</h2>
+
+    <div class="section">
+        <h3>Borrower Name</h3>
+        <input type="text" id="borrowerName" placeholder="Borrower Name">
+        <button onclick="borrowItem()">Add & Borrow</button>
+    </div>
+
+    <div class="section">
+        <h3>Borrow Equipment</h3>
+        <select id="equipmentSelect"></select>
+    </div>
+
+    <div class="section dashboard-cards">
+        <div class="dash-card">
+            <h4>Total Equipment</h4>
+            <p id="totalEquip">0</p>
+        </div>
+        <div class="dash-card">
+            <h4>Active Borrows</h4>
+            <p id="totalBorrow">0</p>
+        </div>
+        <div class="dash-card">
+            <h4>Total Returns</h4>
+            <p id="totalReturn">0</p>
+        </div>
+    </div>
+</div>
+
+<!-- DASHBOARD 2: Borrow Records -->
+<div class="card" id="dashboard-borrow">
+    <h2>Dashboard: Borrow Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Borrower</th>
+                <th>Equipment</th>
+                <th>Date/Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="borrowTable"></tbody>
+    </table>
+</div>
+
+<!-- DASHBOARD 3: Return Records -->
+<div class="card" id="dashboard-return">
+    <h2>Dashboard: Return Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Borrower</th>
+                <th>Equipment</th>
+                <th>Borrowed Date/Time</th>
+                <th>Returned Date/Time</th>
+            </tr>
+        </thead>
+        <tbody id="returnTable"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
