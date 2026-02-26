@@ -1,4 +1,4 @@
-// Predefined equipment
+
 let equipment = [
     {name: "Notebook", qty: 10},
     {name: "Calculator", qty: 5},
@@ -9,20 +9,20 @@ let equipment = [
     {name: "Textbook - Science", qty: 8},
 ];
 
-// Load saved data
+
 let records = JSON.parse(localStorage.getItem("records")) || [];
 let returns = JSON.parse(localStorage.getItem("returns")) || [];
 let savedEquipment = JSON.parse(localStorage.getItem("equipment"));
 if(savedEquipment) equipment = savedEquipment;
 
-// Save to localStorage
+
 function saveData() {
     localStorage.setItem("records", JSON.stringify(records));
     localStorage.setItem("returns", JSON.stringify(returns));
     localStorage.setItem("equipment", JSON.stringify(equipment));
 }
 
-// Borrow equipment (Add & Borrow)
+
 function borrowItem() {
     let borrower = document.getElementById("borrowerName").value.trim();
     let equipText = document.getElementById("equipmentSelect").value;
@@ -49,7 +49,7 @@ function borrowItem() {
     loadData();
 }
 
-// Return equipment
+
 function returnItem(index) {
     let record = records[index];
     let eq = equipment.find(e => e.name === record.equipment);
@@ -74,13 +74,13 @@ function returnItem(index) {
     loadData();
 }
 
-// Load data into dashboard
+
 function loadData() {
-    // Equipment dropdown
+   
     document.getElementById("equipmentSelect").innerHTML = equipment.map(e =>
         `<option>${e.name}</option>`).join("");
 
-    // Borrow records
+    
     document.getElementById("borrowTable").innerHTML = records.map((r,i) =>
         `<tr>
             <td>${r.borrower}</td>
@@ -89,7 +89,7 @@ function loadData() {
             <td><button onclick="returnItem(${i})">Return</button></td>
         </tr>`).join("");
 
-    // Return records
+   
     document.getElementById("returnTable").innerHTML = returns.map(r =>
         `<tr>
             <td>${r.borrower}</td>
@@ -98,7 +98,7 @@ function loadData() {
             <td>${r.returnedDate}</td>
         </tr>`).join("");
 
-    // Dashboard stats
+   
     document.getElementById("totalEquip").innerText = equipment.length;
     document.getElementById("totalBorrow").innerText = records.length;
     document.getElementById("totalReturn").innerText = returns.length;

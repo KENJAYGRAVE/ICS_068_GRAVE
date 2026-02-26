@@ -91,7 +91,7 @@ th, td {
     border-bottom: 1px solid #ccc;
 }
 
-/* Dashboard Cards Row */
+
 .dashboard-cards {
     display: flex;
     gap: 15px;

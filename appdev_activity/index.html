@@ -4,13 +4,48 @@
     <title>Equipment Borrowing System</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    
+   
+    <a class="navbar-brand" href="#">Equipment Borrowing</a>
+
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSystem">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="navbarSystem">
+      <ul class="navbar-nav ms-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link active" href="#dashboard-main">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#dashboard-borrow">Borrow Records</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#dashboard-return">Return Records</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
 <body>
 
 <h1>Equipment Borrowing System</h1>
 
-<!-- DASHBOARD 1: Borrower & Equipment Status -->
+
 <div class="card" id="dashboard-main">
-    <h2>Dashboard: Borrow & Equipment Status</h2>
+    <h2> Borrow & Equipment Status</h2>
 
     <div class="section">
         <h3>Borrower Name</h3>
@@ -39,9 +74,9 @@
     </div>
 </div>
 
-<!-- DASHBOARD 2: Borrow Records -->
+
 <div class="card" id="dashboard-borrow">
-    <h2>Dashboard: Borrow Records</h2>
+    <h2> Borrow Records</h2>
     <table>
         <thead>
             <tr>
@@ -55,9 +90,9 @@
     </table>
 </div>
 
-<!-- DASHBOARD 3: Return Records -->
+
 <div class="card" id="dashboard-return">
-    <h2>Dashboard: Return Records</h2>
+    <h2> Return Records</h2>
     <table>
         <thead>
             <tr>
